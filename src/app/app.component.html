@@ -1,0 +1,12 @@
+<main>
+    <a [routerLink]="['/']">
+      <header class="brand-name">
+        <h1>{{title}}</h1>
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+      </header>
+    </a>
+    <section class="content">
+    <a routerLink="/cryton">Cryton</a>
+      <router-outlet></router-outlet>
+    </section>
+  </main>
