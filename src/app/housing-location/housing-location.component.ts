@@ -29,9 +29,9 @@ export class HousingLocationComponent {
     const id = Number(this.housingLocation.id);
     console.log('HousingLocation ID:', id);
     if (id === 0) {
-      return '/cryton'; // Navigate to Cryton if id is 0
+      return '/cryton'; 
     } else {
-      return ['/details', id]; // Navigate to details/:id otherwise
+      return ['/details', id]; 
     }
   }
 }

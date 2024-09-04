@@ -9,6 +9,10 @@ import {provideRouter} from '@angular/router';
 import routeConfig from './app/routes';
 import { provideOAuthClient } from 'angular-oauth2-oidc';
 import { importProvidersFrom } from '@angular/core';
+import { environment } from './environments/environment';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -16,4 +20,5 @@ bootstrapApplication(AppComponent, {
     provideRouter(routeConfig),
     importProvidersFrom(HttpClientModule), 
     provideOAuthClient()],
+    platformBrowserDynamic().bootstrapModule(AppModule),
 }).catch((err) => console.error(err));
